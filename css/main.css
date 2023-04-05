@@ -1,0 +1,298 @@
+:root {
+    --primary-text-clr: #111;
+    --secondary-text-clr: #ababab;
+
+    --accent-clr: #9747FF;
+}
+
+/* reset css */
+
+
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-clr);
+}
+
+/* header */
+.header-nav {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+
+
+.nav-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 2.25rem;
+}
+
+.nav-list a {
+    color: var(--primary-text-clr);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-list a.active::before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 1px;
+    border-bottom: 2px solid var(--primary-text-clr);
+    bottom: -4px;
+}
+
+.nav-list a::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid var(--secondary-text-clr);
+    bottom: -4px;
+    transition: width .3s;
+}
+
+.nav-list a:hover::before {
+    width: 40%;
+}
+
+
+
+/* main */
+
+.main-content {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.left-col {
+    width: 45%;
+}
+
+
+
+.left-col h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.cta-btns {
+    margin: 1.5rem;
+}
+
+.cta-btns,
+.secondary-btn {
+    display: inline-flex;
+    gap: 1.5rem;
+}
+
+.primary-btn {
+    background-color: var(--accent-clr);
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 1em 2em;
+    align-self: center;
+}
+
+.primary-btn:hover {
+    background-color: white;
+    border: 1px solid var(--accent-clr);
+    color: var(--accent-clr);
+}
+
+.secondary-btn {
+    text-decoration: none;
+    color: var(--primary-text-clr);
+    gap: .5rem;
+    align-items: center;
+    position: relative;
+
+}
+
+.secondary-btn svg {
+    transition: transform .3s;
+    width: 20px;
+}
+
+
+
+.secondary-btn:hover svg {
+    transform: translateX(10px);
+}
+
+.secondary-btn:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+
+.news {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 3rem;
+    border: 1px solid var(--primary-text-clr);
+    border-radius: 8px;
+    box-shadow: 0px 0px 1rem #eee;
+    position: relative;
+    align-items: flex-start;
+
+}
+
+.news::before {
+    position: absolute;
+    content: "";
+    background-image: url(/images/confetti.svg);
+    width: 100px;
+    height: 100px;
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+
+}
+
+.employees {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 100%;
+    margin: 0;
+}
+
+.details {
+    margin: 0;
+}
+
+.right-col {
+    display: grid;
+    gap: 1rem;
+    flex: 1;
+    margin: .5rem;
+}
+
+.card {
+    min-height: 450px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    background-size: 150%;
+    transition: background-size .3s;
+}
+
+
+
+
+.card-info {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    border-radius: 6px;
+    padding: .5rem;
+    margin: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform .3s;
+}
+
+.card:hover .card-info {
+    transform: translateY(-.5rem);
+}
+
+.card-info p {
+    margin: 0;
+}
+
+.card-info a {
+    color: var(--primary-text-clr);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.card1 {
+    background-image: url(/images/clothing1.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.card1::before {
+    position: absolute;
+    content: "";
+    background-image: url(/images/tag.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    top: 20px;
+    left: -40px;
+    pointer-events: none;
+}
+
+.card2 {
+    background-image: url(/images/clothing2.jpg);
+
+}
+
+.card3 {
+    background-image: url(/images/clothing3.jpg);
+
+}
+
+.card:hover {
+    background-size: 160%;
+}
+
+@media (min-width:768px) {
+
+
+    .right-col {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "left right-top"
+            "left right-bottom";
+    }
+
+    .card1 {
+        grid-area: left;
+    }
+
+    .main-content {
+        flex-direction: row;
+    }
+
+    .card {
+        min-height: unset;
+    }
+
+
+}
+
+@media (min-width:576px) {
+
+    .header-nav {
+        justify-content: space-between;
+    }
+
+
+}
