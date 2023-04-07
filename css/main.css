@@ -164,7 +164,7 @@ body {
 .news::before {
     position: absolute;
     content: "";
-    background-image: url(images/confetti.svg);
+    background-image: url(/images/confetti.svg);
     width: 100px;
     height: 100px;
     left: -20px;
