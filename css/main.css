@@ -229,7 +229,7 @@ body {
 }
 
 .card1 {
-    background-image: url(/images/clothing1.jpg);
+    background-image: url(images/clothing1.jpg);
     background-repeat: no-repeat;
     position: relative;
 }
@@ -248,7 +248,7 @@ body {
 }
 
 .card2 {
-    background-image: url(/images/clothing2.jpg);
+    background-image: url(./images/clothing2.jpg);
 
 }
 
