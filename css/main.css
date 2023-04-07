@@ -164,7 +164,7 @@ body {
 .news::before {
     position: absolute;
     content: "";
-    background-image: url(/images/confetti.svg);
+    background-image: url(images/confetti.svg);
     width: 100px;
     height: 100px;
     left: -20px;
@@ -238,7 +238,7 @@ body {
 .card1::before {
     position: absolute;
     content: "";
-    background-image: url(/images/tag.svg);
+    background-image: url(images/tag.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 50%;
@@ -249,12 +249,12 @@ body {
 }
 
 .card2 {
-    background-image: url(./images/clothing2.jpg);
+    background-image: url(images/clothing2.jpg);
 
 }
 
 .card3 {
-    background-image: url(/images/clothing3.jpg);
+    background-image: url(images/clothing3.jpg);
 
 }
 
